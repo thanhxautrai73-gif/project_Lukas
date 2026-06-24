@@ -5,13 +5,13 @@ const Wishlist = () => {
   const { addToCart } = useCart()
 
   const wishlistProducts = [
-    { id: 101, name: 'Metallic cotton dress', price: 29.99, image: '/assets/img/product/product-1.png', inStock: true },
-    { id: 102, name: 'Open-knit sweater', price: 39.99, image: '/assets/img/product/product-2.png', inStock: true },
-    { id: 103, name: 'Metallic cotton dress', price: 29.99, image: '/assets/img/product/product-3.png', inStock: false },
-    { id: 104, name: 'Open-knit sweater', price: 39.99, image: '/assets/img/product/product-4.png', inStock: true },
-    { id: 105, name: 'Metallic cotton dress', price: 29.99, image: '/assets/img/product/product-5.png', inStock: true },
-    { id: 106, name: 'Open-knit sweater', price: 39.99, image: '/assets/img/product/product-6.png', inStock: true },
-    { id: 107, name: 'Open-knit sweater', price: 39.99, image: '/assets/img/product/product-7.png', inStock: true },
+    { id: 101, name: 'Váy cotton metallic', price: 29.99, image: '/assets/img/product/product-1.png', inStock: true },
+    { id: 102, name: 'Áo len đan dây', price: 39.99, image: '/assets/img/product/product-2.png', inStock: true },
+    { id: 103, name: 'Váy cotton metallic', price: 29.99, image: '/assets/img/product/product-3.png', inStock: false },
+    { id: 104, name: 'Áo len đan dây', price: 39.99, image: '/assets/img/product/product-4.png', inStock: true },
+    { id: 105, name: 'Váy cotton metallic', price: 29.99, image: '/assets/img/product/product-5.png', inStock: true },
+    { id: 106, name: 'Áo len đan dây', price: 39.99, image: '/assets/img/product/product-6.png', inStock: true },
+    { id: 107, name: 'Áo len đan dây', price: 39.99, image: '/assets/img/product/product-7.png', inStock: true },
   ]
 
   const handleAddToCart = (product: any) => {
@@ -32,11 +32,11 @@ const Wishlist = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Wishlist</h1>
+              <h1>Danh Sách Yêu Thích</h1>
               <ul className="breadcrumb">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/shop">Shop</Link></li>
-                <li className="current">Wishlist</li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li><Link to="/shop">Cửa Hàng</Link></li>
+                <li className="current">Danh Sách Yêu Thích</li>
               </ul>
             </div>
           </div>
@@ -56,10 +56,10 @@ const Wishlist = () => {
                 <table className="table table-bordered text-center mb-0">
                   <thead>
                     <tr>
-                      <th>Products</th>
-                      <th>Price</th>
-                      <th>Status</th>
-                      <th>Cart</th>
+                      <th>Sản phẩm</th>
+                      <th>Giá</th>
+                      <th>Trạng thái</th>
+                      <th>Giỏ hàng</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -82,9 +82,9 @@ const Wishlist = () => {
                         <td>
                           <div className="stock-status">
                             {product.inStock ? (
-                              <p>In Stock</p>
+                              <p>Còn hàng</p>
                             ) : (
-                              <p className="text-danger">Stock Out</p>
+                              <p className="text-danger">Hết hàng</p>
                             )}
                           </div>
                         </td>
@@ -94,7 +94,7 @@ const Wishlist = () => {
                             onClick={() => product.inStock && handleAddToCart(product)}
                             disabled={!product.inStock}
                           >
-                            Add to Cart
+                            Thêm vào giỏ
                           </button>
                         </td>
                       </tr>

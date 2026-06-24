@@ -9,25 +9,25 @@ const Shop_Right_Sidebar = () => {
         e.preventDefault();
         e.stopPropagation();
         addToCart(product);
-        alert(`${product.name} has been added to your cart!`);
+        alert(`${product.name} đã được thêm vào giỏ hàng!`);
     };
 
     const products = [
-      { id: 1, name: 'Auto Clutch & Brake', price: 165.00, image: '/assets/img/product/product-6.png', secondaryImage: '/assets/img/product/product-7.png', sale: '25%' },
-      { id: 2, name: '17 INCH RIMS 8 LUG', price: 235.00, image: '/assets/img/product/product-2.png', secondaryImage: '/assets/img/product/product-3.png' },
-      { id: 3, name: 'AIR INTAKE SYSTEM', price: 125.00, image: '/assets/img/product/product-4.png', secondaryImage: '/assets/img/product/product-5.png', sale: '35%' },
-      { id: 4, name: 'LEATHER STEERING WHEEL', price: 25.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-10.png', sale: '15%' },
-      { id: 5, name: 'Brake Disc Plate', price: 165.00, image: '/assets/img/product/product-13.png', secondaryImage: '/assets/img/product/product-7.png' },
-      { id: 6, name: '18 INCH RIMS 8 LUG', price: 235.00, image: '/assets/img/product/product-3.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
-      { id: 7, name: 'Turbo Intake System', price: 125.00, image: '/assets/img/product/product-7.png', secondaryImage: '/assets/img/product/product-9.png' },
-      { id: 8, name: 'Sport Steering Wheel', price: 25.00, image: '/assets/img/product/product-12.png', secondaryImage: '/assets/img/product/product-13.png', sale: '11%' },
-      { id: 9, name: 'LEATHER STEERING WHEEL', price: 25.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-10.png', sale: '15%' },
+      { id: 1, name: 'Bộ Côn & Phanh Tự Động', price: 165.00, image: '/assets/img/product/product-6.png', secondaryImage: '/assets/img/product/product-7.png', sale: '25%' },
+      { id: 2, name: 'Vành 17 inch 8 Lug', price: 235.00, image: '/assets/img/product/product-2.png', secondaryImage: '/assets/img/product/product-3.png' },
+      { id: 3, name: 'Hệ Thống Hút Khí', price: 125.00, image: '/assets/img/product/product-4.png', secondaryImage: '/assets/img/product/product-5.png', sale: '35%' },
+      { id: 4, name: 'Vô Lăng Bọc Da', price: 25.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-10.png', sale: '15%' },
+      { id: 5, name: 'Đĩa Phanh', price: 165.00, image: '/assets/img/product/product-13.png', secondaryImage: '/assets/img/product/product-7.png' },
+      { id: 6, name: 'Vành 18 inch 8 Lug', price: 235.00, image: '/assets/img/product/product-3.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
+      { id: 7, name: 'Hệ Thống Hút Turbo', price: 125.00, image: '/assets/img/product/product-7.png', secondaryImage: '/assets/img/product/product-9.png' },
+      { id: 8, name: 'Vô Lăng Thể Thao', price: 25.00, image: '/assets/img/product/product-12.png', secondaryImage: '/assets/img/product/product-13.png', sale: '11%' },
+      { id: 9, name: 'Vô Lăng Bọc Da', price: 25.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-10.png', sale: '15%' },
     ];
 
     const recentProducts = [
-        { id: 10, name: 'Injected humour', price: 799.99, image: '/assets/img/product/product-1.png' },
-        { id: 11, name: 'Classical literature', price: 599.99, oldPrice: 799.99, image: '/assets/img/product/product-2.png' },
-        { id: 12, name: 'Classical literature', price: 649.99, oldPrice: 799.99, image: '/assets/img/product/product-3.png' },
+        { id: 10, name: 'Sản phẩm mới nhập', price: 799.99, image: '/assets/img/product/product-1.png' },
+        { id: 11, name: 'Phụ tùng cao cấp', price: 599.99, oldPrice: 799.99, image: '/assets/img/product/product-2.png' },
+        { id: 12, name: 'Phụ tùng cao cấp', price: 649.99, oldPrice: 799.99, image: '/assets/img/product/product-3.png' },
     ];
 
   return (
@@ -39,10 +39,10 @@ const Shop_Right_Sidebar = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Shop Right Sidebar</h1>
+              <h1>Cửa Hàng Thanh Bên Phải</h1>
               <ul className="breadcrumb">
-                <li><Link to="/">Home</Link></li>
-                <li className="current">Shop</li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li className="current">Cửa Hàng</li>
               </ul>
             </div>
           </div>
@@ -68,12 +68,12 @@ const Shop_Right_Sidebar = () => {
               </div>
               <div className="col-sm-6">
                 <div className="sort-by-wrapper">
-                  <label htmlFor="sort" className="sr-only">Sort By</label>
+                  <label htmlFor="sort" className="sr-only">Sắp xếp theo</label>
                   <select name="sort" id="sort">
-                    <option value="sbp">Sort By Popularity</option>
-                    <option value="sbn">Sort By Newest</option>
-                    <option value="sbt">Sort By Trending</option>
-                    <option value="sbr">Sort By Rating</option>
+                    <option value="sbp">Sắp xếp theo độ phổ biến</option>
+                    <option value="sbn">Sắp xếp theo mới nhất</option>
+                    <option value="sbt">Sắp xếp theo xu hướng</option>
+                    <option value="sbr">Sắp xếp theo đánh giá</option>
                   </select>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const Shop_Right_Sidebar = () => {
                     <div className="product-item__content">
                       <div className="product-item__info">
                         <h4 className="title"><Link to="/single-product">{product.name}</Link></h4>
-                        <span className="price"><strong>Price:</strong> ${product.price.toFixed(2)}</span>
+                        <span className="price"><strong>Giá:</strong> ${product.price.toFixed(2)}</span>
                       </div>
                       <div className="product-item__action">
                         <button className="btn-add-to-cart" onClick={(e) => handleAddToCart(e, product)}><i className="ion-bag" /></button>
@@ -109,11 +109,7 @@ const Shop_Right_Sidebar = () => {
                         <button className="btn-add-to-cart"><i className="ion-eye" /></button>
                       </div>
                       <div className="product-item__desc">
-                        <p>Pursue pleasure rationally encounter consequences that are extremely painful.
-                          Nor
-                          again is there anyone who loves or pursues or desires to obtain pain of
-                          itself,
-                          because it is pain, but because occasionally circles</p>
+                        <p>Theo đuổi sự hài lòng một cách hợp lý sẽ mang lại những kết quả cực kỳ giá trị. Không ai yêu thích hoặc theo đuổi nỗi đau cho chính nó, mà vì đôi khi những cơ hội mới sẽ xuất hiện.</p>
                       </div>
                     </div>
                     {product.sale && (
@@ -139,7 +135,7 @@ const Shop_Right_Sidebar = () => {
                 </nav>
               </div>
               <div className="col-sm-6 text-center text-sm-end">
-                <p>Showing 1–{products.length} of 26 results</p>
+                <p>Hiển thị 1–{products.length} trong số 26 kết quả</p>
               </div>
             </div>
           </div>
@@ -147,17 +143,17 @@ const Shop_Right_Sidebar = () => {
         <div className="col-lg-3">
           <div className="sidebar-area">
             <div className="sidebar-item">
-              <h4 className="sidebar-title">Filter By Color</h4>
+              <h4 className="sidebar-title">Lọc theo màu sắc</h4>
               <div className="sidebar-body">
                 <ul className="sidebar-list">
-                  <li><Link to="/shop">Black <span>(2)</span></Link></li>
-                  <li><Link to="/shop">Blue <span>(3)</span></Link></li>
-                  <li><Link to="/shop">Green <span>(6)</span></Link></li>
+                  <li><Link to="/shop">Đen <span>(2)</span></Link></li>
+                  <li><Link to="/shop">Xanh dương <span>(3)</span></Link></li>
+                  <li><Link to="/shop">Xanh lá <span>(6)</span></Link></li>
                 </ul>
               </div>
             </div>
             <div className="sidebar-item">
-              <h4 className="sidebar-title">Recent Products</h4>
+              <h4 className="sidebar-title">Sản phẩm gần đây</h4>
               <div className="sidebar-body">
                 {recentProducts.map(product => (
                   <div className="sidebar-product" key={product.id}>
@@ -178,33 +174,33 @@ const Shop_Right_Sidebar = () => {
               </div>
             </div>
             <div className="sidebar-item">
-              <h4 className="sidebar-title">Product categories</h4>
+              <h4 className="sidebar-title">Danh mục sản phẩm</h4>
               <div className="sidebar-body">
                 <ul className="sidebar-list">
-                  <li><Link to="/shop">All Product</Link></li>
-                  <li><Link to="/shop">Best Seller</Link></li>
-                  <li><Link to="/shop">Car</Link></li>
-                  <li><Link to="/shop">Parts</Link></li>
-                  <li><Link to="/shop">Shop</Link></li>
-                  <li><Link to="/shop">Tayer</Link></li>
-                  <li><Link to="/shop">Uncategorized</Link></li>
+                  <li><Link to="/shop">Tất cả sản phẩm</Link></li>
+                  <li><Link to="/shop">Bán chạy</Link></li>
+                  <li><Link to="/shop">Ô tô</Link></li>
+                  <li><Link to="/shop">Phụ tùng</Link></li>
+                  <li><Link to="/shop">Cửa hàng</Link></li>
+                  <li><Link to="/shop">Lốp xe</Link></li>
+                  <li><Link to="/shop">Chưa phân loại</Link></li>
                 </ul>
               </div>
             </div>
             <div className="sidebar-item">
-              <h4 className="sidebar-title">Product tags</h4>
+              <h4 className="sidebar-title">Thẻ sản phẩm</h4>
               <div className="sidebar-body">
                 <ul className="tags">
-                  <li><Link to="/shop">Car</Link></li>
-                  <li><Link to="/shop">Parts</Link></li>
-                  <li><Link to="/shop">Shop</Link></li>
-                  <li><Link to="/shop">Tayer</Link></li>
-                  <li><Link to="/shop">Seat</Link></li>
-                  <li><Link to="/shop">Engine</Link></li>
-                  <li><Link to="/shop">Parts</Link></li>
-                  <li><Link to="/shop">Fuel</Link></li>
-                  <li><Link to="/shop">Modern</Link></li>
-                  <li><Link to="/shop">Brake</Link></li>
+                  <li><Link to="/shop">Ô tô</Link></li>
+                  <li><Link to="/shop">Phụ tùng</Link></li>
+                  <li><Link to="/shop">Cửa hàng</Link></li>
+                  <li><Link to="/shop">Lốp xe</Link></li>
+                  <li><Link to="/shop">Ghế</Link></li>
+                  <li><Link to="/shop">Động cơ</Link></li>
+                  <li><Link to="/shop">Phụ tùng</Link></li>
+                  <li><Link to="/shop">Nhiên liệu</Link></li>
+                  <li><Link to="/shop">Hiện đại</Link></li>
+                  <li><Link to="/shop">Phanh</Link></li>
                 </ul>
               </div>
             </div>

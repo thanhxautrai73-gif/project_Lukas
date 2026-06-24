@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Contact = () => {
     return (
         <div>
@@ -8,10 +10,10 @@ const Contact = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Contact</h1>
+              <h1>Liên Hệ</h1>
               <ul className="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li className="current"><a href="#">Contact</a></li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li className="current"><Link to="/contact">Liên Hệ</Link></li>
               </ul>
             </div>
           </div>
@@ -32,8 +34,8 @@ const Contact = () => {
                   <i className="ion-ios-location-outline" />
                 </div>
                 <div className="con-info-txt">
-                  <h4>Our Location</h4>
-                  <p>(800) 123 456 789 / (800) 123 456 789
+                  <h4>Vị Trí Của Chúng Tôi</h4>
+                  <p>(+84) 123 456 789 / (+84) 987 654 321
                     info@example.com</p>
                 </div>
               </div>
@@ -44,8 +46,8 @@ const Contact = () => {
                   <i className="ion-iphone" />
                 </div>
                 <div className="con-info-txt">
-                  <h4>Contact us Anytime</h4>
-                  <p>Mobile: 012 345 678 <br />
+                  <h4>Liên Hệ Bất Cứ Lúc Nào</h4>
+                  <p>Di động: 012 345 678 <br />
                     Fax: 123 456 789</p>
                 </div>
               </div>
@@ -56,7 +58,7 @@ const Contact = () => {
                   <i className="ion-ios-email-outline" />
                 </div>
                 <div className="con-info-txt">
-                  <h4>Write Some Words</h4>
+                  <h4>Gửi Lời Nhắn</h4>
                   <p>Support24/7@example.com
                     info@example.com</p>
                 </div>
@@ -70,38 +72,38 @@ const Contact = () => {
           <div className="row">
             <div className="col-12">
               <div className="contact-form-content">
-                <h2>Get In Touch</h2>
+                <h2>Liên Lạc Với Chúng Tôi</h2>
                 <div className="contact-form-wrap">
                   <form action="http://whizthemes.com/mail-php/raju/gariongso/mail.php" method="post" id="contact-form">
                     <div className="contact-form-inner">
                       <div className="row">
                         <div className="col-md-6">
                           <div className="input-item">
-                            <label className="sr-only" htmlFor="name">name</label>
-                            <input type="text" name="name" id="name" placeholder="Name" required />
+                            <label className="sr-only" htmlFor="name">Họ và tên</label>
+                            <input type="text" name="name" id="name" placeholder="Họ và tên" required />
                           </div>
                         </div>
                         <div className="col-md-6">
                           <div className="input-item">
-                            <label className="sr-only" htmlFor="email">email</label>
+                            <label className="sr-only" htmlFor="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="Email" required />
                           </div>
                         </div>
                         <div className="col-12">
                           <div className="input-item">
-                            <label className="sr-only" htmlFor="subject">subject</label>
-                            <input type="text" name="subject" id="subject" placeholder="Subject" required />
+                            <label className="sr-only" htmlFor="subject">Tiêu đề</label>
+                            <input type="text" name="subject" id="subject" placeholder="Tiêu đề" required />
                           </div>
                         </div>
                         <div className="col-12">
                           <div className="input-item">
-                            <label className="sr-only" htmlFor="message">message</label>
-                            <textarea name="message" id="message" cols={30} rows={8} placeholder="Write Message" required defaultValue={""} />
+                            <label className="sr-only" htmlFor="message">Tin nhắn</label>
+                            <textarea name="message" id="message" cols={30} rows={8} placeholder="Viết tin nhắn" required defaultValue={""} />
                           </div>
                         </div>
                         <div className="col-12">
                           <div className="input-item">
-                            <button className="btn btn-brand">Send a Message</button>
+                            <button className="btn btn-brand">Gửi Tin Nhắn</button>
                           </div>
                         </div>
                       </div>

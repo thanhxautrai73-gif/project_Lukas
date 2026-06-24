@@ -10,28 +10,28 @@ const Home1 = () => {
         e.preventDefault()
         e.stopPropagation()
         addToCart(product)
-        alert(`${product.name} has been added to your cart!`)
+        alert(`${product.name} đã được thêm vào giỏ hàng!`)
     }
 
     const bestSellers = [
-      { id: 101, name: 'Auto Clutch & Brake', price: 165.00, image: '/assets/img/product/product-1.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
-      { id: 102, name: 'Leather Steering Wheel', price: 615.00, image: '/assets/img/product/product-3.png', secondaryImage: '/assets/img/product/product-4.png' },
-      { id: 103, name: 'Hanging 4K Camera', price: 65.00, image: '/assets/img/product/product-4.png', secondaryImage: '/assets/img/product/product-5.png', sale: '35%' },
-      { id: 104, name: '17 inch Rims 8 Lug', price: 165.00, image: '/assets/img/product/product-2.png', secondaryImage: '/assets/img/product/product-1.png' },
-      { id: 105, name: 'Locking Hub Diagram', price: 165.00, image: '/assets/img/product/product-5.png', secondaryImage: '/assets/img/product/product-4.png', sale: '21%' },
+      { id: 101, name: 'Bộ Côn & Phanh Tự Động', price: 165.00, image: '/assets/img/product/product-1.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
+      { id: 102, name: 'Vô Lăng Bọc Da', price: 615.00, image: '/assets/img/product/product-3.png', secondaryImage: '/assets/img/product/product-4.png' },
+      { id: 103, name: 'Camera 4K Treo', price: 65.00, image: '/assets/img/product/product-4.png', secondaryImage: '/assets/img/product/product-5.png', sale: '35%' },
+      { id: 104, name: 'Vành 17 inch 8 Lug', price: 165.00, image: '/assets/img/product/product-2.png', secondaryImage: '/assets/img/product/product-1.png' },
+      { id: 105, name: 'Sơ Đồ Trục Khóa', price: 165.00, image: '/assets/img/product/product-5.png', secondaryImage: '/assets/img/product/product-4.png', sale: '21%' },
     ]
 
     const allProducts = [
-        { id: 111, name: 'Auto Clutch & Brake', price: 165.00, image: '/assets/img/product/product-6.png', secondaryImage: '/assets/img/product/product-7.png', sale: '25%' },
-        { id: 112, name: 'Leather Steering Wheel', price: 615.00, image: '/assets/img/product/product-8.png', secondaryImage: '/assets/img/product/product-9.png' },
-        { id: 113, name: 'Hanging 4K Camera', price: 65.00, image: '/assets/img/product/product-7.png', secondaryImage: '/assets/img/product/product-14.png', sale: '35%' },
-        { id: 114, name: '17 inch Rims 8 Lug', price: 165.00, image: '/assets/img/product/product-10.png', secondaryImage: '/assets/img/product/product-5.png' },
-        { id: 115, name: 'Locking Hub Diagram', price: 165.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-4.png', sale: '21%' },
-        { id: 116, name: 'Hanging 4K Camera', price: 65.00, image: '/assets/img/product/product-13.png', secondaryImage: '/assets/img/product/product-12.png', sale: '35%' },
-        { id: 117, name: '17 inch Rims 8 Lug', price: 165.00, image: '/assets/img/product/product-14.png', secondaryImage: '/assets/img/product/product-8.png' },
-        { id: 118, name: 'Locking Hub Diagram', price: 165.00, image: '/assets/img/product/product-15.png', secondaryImage: '/assets/img/product/product-4.png', sale: '21%' },
-        { id: 119, name: 'Auto Clutch & Brake', price: 165.00, image: '/assets/img/product/product-12.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
-        { id: 120, name: 'Leather Steering Wheel', price: 615.00, image: '/assets/img/product/product-9.png', secondaryImage: '/assets/img/product/product-4.png' },
+        { id: 111, name: 'Bộ Côn & Phanh Tự Động', price: 165.00, image: '/assets/img/product/product-6.png', secondaryImage: '/assets/img/product/product-7.png', sale: '25%' },
+        { id: 112, name: 'Vô Lăng Bọc Da', price: 615.00, image: '/assets/img/product/product-8.png', secondaryImage: '/assets/img/product/product-9.png' },
+        { id: 113, name: 'Camera 4K Treo', price: 65.00, image: '/assets/img/product/product-7.png', secondaryImage: '/assets/img/product/product-14.png', sale: '35%' },
+        { id: 114, name: 'Vành 17 inch 8 Lug', price: 165.00, image: '/assets/img/product/product-10.png', secondaryImage: '/assets/img/product/product-5.png' },
+        { id: 115, name: 'Sơ Đồ Trục Khóa', price: 165.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-4.png', sale: '21%' },
+        { id: 116, name: 'Camera 4K Treo', price: 65.00, image: '/assets/img/product/product-13.png', secondaryImage: '/assets/img/product/product-12.png', sale: '35%' },
+        { id: 117, name: 'Vành 17 inch 8 Lug', price: 165.00, image: '/assets/img/product/product-14.png', secondaryImage: '/assets/img/product/product-8.png' },
+        { id: 118, name: 'Sơ Đồ Trục Khóa', price: 165.00, image: '/assets/img/product/product-15.png', secondaryImage: '/assets/img/product/product-4.png', sale: '21%' },
+        { id: 119, name: 'Bộ Côn & Phanh Tự Động', price: 165.00, image: '/assets/img/product/product-12.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
+        { id: 120, name: 'Vô Lăng Bọc Da', price: 615.00, image: '/assets/img/product/product-9.png', secondaryImage: '/assets/img/product/product-4.png' },
     ]
 
     return (
@@ -45,9 +45,9 @@ const Home1 = () => {
             <div className="col-lg-6 order-1 order-lg-0">
               <div className="slide-content">
                 <div className="slide-content-inner">
-                  <h3>NEW TECHNOLOGY &amp; BUILD</h3>
-                  <h2>LATEST &amp; POWERFUL ENGINE FOR YOU</h2>
-                  <Link className="btn btn-white" to="/shop">Shop Now</Link>
+                  <h3>CÔNG NGHỆ &amp; THIẾT KẾ MỚI</h3>
+                  <h2>ĐỘNG CƠ MẠNH MẼ DÀNH CHO BẠN</h2>
+                  <Link className="btn btn-white" to="/shop">Mua Ngay</Link>
                 </div>
               </div>
             </div>
@@ -65,9 +65,9 @@ const Home1 = () => {
             <div className="col-lg-6 order-1 order-lg-0">
               <div className="slide-content">
                 <div className="slide-content-inner">
-                  <h3>NEW TECHNOLOGY &amp; BUILD</h3>
-                  <h2>WHEELS &amp; TIRES <br /> COLLECTIONS</h2>
-                  <Link className="btn btn-white" to="/shop">Shop Now</Link>
+                  <h3>CÔNG NGHỆ &amp; THIẾT KẾ MỚI</h3>
+                  <h2>BỘ SƯU TẬP <br /> BÁNH XE &amp; LỐP XE</h2>
+                  <Link className="btn btn-white" to="/shop">Mua Ngay</Link>
                 </div>
               </div>
             </div>
@@ -123,9 +123,8 @@ const Home1 = () => {
       <div className="row">
         <div className="col-lg-5 m-auto text-center">
           <div className="section-title">
-            <h2 className="h3">Best Seller</h2>
-            <p>All best seller product are now available for you and your can buy
-              this product from here any time any where so sop now</p>
+            <h2 className="h3">Sản Phẩm Bán Chạy</h2>
+            <p>Tất cả sản phẩm bán chạy nhất hiện đã có sẵn. Bạn có thể mua ngay tại đây mọi lúc mọi nơi.</p>
           </div>
         </div>
       </div>
@@ -150,7 +149,7 @@ const Home1 = () => {
                       <span><i className="ion-android-star-half" /></span>
                     </div>
                     <h4 className="title"><Link to="/single-product">{product.name}</Link></h4>
-                    <span className="price"><strong>Price:</strong> ${product.price.toFixed(2)}</span>
+                    <span className="price"><strong>Giá:</strong> ${product.price.toFixed(2)}</span>
                   </div>
                   <div className="product-item__action">
                     <button className="btn-add-to-cart" onClick={(e) => handleAddToCart(e, { id: product.id, name: product.name, price: product.price, image: product.image })}><i className="ion-bag" /></button>
@@ -183,9 +182,9 @@ const Home1 = () => {
         </div>
         <div className="col-md-7 col-lg-6 text-center">
           <div className="flash-deals-content">
-            <h2>FLASH DEALS</h2>
-            <h3>HURRY UP AND GET 25% DISCOUNT</h3>
-            <Link to="/cart" className="btn btn-brand">Add to cart</Link>
+            <h2>ƯU ĐÃI CHỚP NHOÁNG</h2>
+            <h3>NHANH TAY NHẬN NGAY GIẢM GIÁ 25%</h3>
+            <Link to="/cart" className="btn btn-brand">Thêm vào giỏ</Link>
             <div className="deals-countdown-area">
               <div className="ht-countdown" data-date="9/20/2023" />
             </div>
@@ -205,9 +204,8 @@ const Home1 = () => {
               <img src="/assets/img/icons/icon-1.png" alt="fast delivery" />
             </div>
             <div className="call-to-action-item__info">
-              <h3>Free Home Delivery</h3>
-              <p>Provide free home delivery
-                for all product over $100</p>
+              <h3>Giao Hàng Miễn Phí</h3>
+              <p>Giao hàng tận nhà miễn phí cho đơn hàng trên $100</p>
             </div>
           </div>
         </div>
@@ -217,9 +215,8 @@ const Home1 = () => {
               <img src="/assets/img/icons/icon-2.png" alt="quality" />
             </div>
             <div className="call-to-action-item__info">
-              <h3>Quality Products</h3>
-              <p>We ensure our product
-                quality all times</p>
+              <h3>Sản Phẩm Chất Lượng</h3>
+              <p>Chúng tôi luôn đảm bảo chất lượng sản phẩm</p>
             </div>
           </div>
         </div>
@@ -229,9 +226,8 @@ const Home1 = () => {
               <img src="/assets/img/icons/icon-3.png" alt="return" />
             </div>
             <div className="call-to-action-item__info">
-              <h3>Online Support</h3>
-              <p>To satisfy our customer we try
-                to give support online</p>
+              <h3>Hỗ Trợ Trực Tuyến</h3>
+              <p>Chúng tôi luôn sẵn sàng hỗ trợ khách hàng trực tuyến</p>
             </div>
           </div>
         </div>
@@ -263,9 +259,8 @@ const Home1 = () => {
       <div className="row">
         <div className="col-lg-5 m-auto text-center">
           <div className="section-title">
-            <h2 className="h3">All Of Our Products</h2>
-            <p>All best seller product are now available for you and your can buy
-              this product from here any time any where so sop now</p>
+            <h2 className="h3">Tất Cả Sản Phẩm</h2>
+            <p>Tất cả sản phẩm bán chạy nhất hiện đã có sẵn. Bạn có thể mua ngay tại đây mọi lúc mọi nơi.</p>
           </div>
         </div>
       </div>
@@ -290,7 +285,7 @@ const Home1 = () => {
                       <span><i className="ion-android-star-half" /></span>
                     </div>
                     <h4 className="title"><Link to="/single-product">{product.name}</Link></h4>
-                    <span className="price"><strong>Price:</strong> ${product.price.toFixed(2)}</span>
+                    <span className="price"><strong>Giá:</strong> ${product.price.toFixed(2)}</span>
                   </div>
                   <div className="product-item__action">
                     <button className="btn-add-to-cart" onClick={(e) => handleAddToCart(e, { id: product.id, name: product.name, price: product.price, image: product.image })}><i className="ion-bag" /></button>
@@ -319,8 +314,8 @@ const Home1 = () => {
         <div className="row">
           <div className="col-12 text-center">
             <div className="call-to-action-txt">
-              <h2>ALL KINDS OF PARTS THAT YOU <br /> NEED CAN FIND HERE</h2>
-              <Link to="/shop" className="btn btn-brand">Shop Now</Link>
+              <h2>TẤT CẢ PHỤ TÙNG BẠN CẦN <br /> ĐỀU CÓ THỂ TÌM THẤY TẠI ĐÂY</h2>
+              <Link to="/shop" className="btn btn-brand">Mua Ngay</Link>
             </div>
           </div>
         </div>
@@ -344,15 +339,15 @@ const Home1 = () => {
         <div className="row">
           <div className="col-lg-8 m-lg-auto col-xl-5 offset-xl-6">
             <div className="newsletter-content text-center">
-              <h4>SPECIAL <span>OFFER</span> FOR SUBSCRIPTION</h4>
-              <h2>GET INSTANT DISCOUNT FOR MEMBERSHIP</h2>
-              <p>Subscribe our newsletter and all latest news of our <br />latest product, promotion and offers
+              <h4>ƯU ĐÃI <span>ĐẶC BIỆT</span> KHI ĐĂNG KÝ</h4>
+              <h2>NHẬN GIẢM GIÁ TỨC THÌ CHO THÀNH VIÊN</h2>
+              <p>Đăng ký nhận bản tin để cập nhật những sản phẩm, <br />khuyến mãi và ưu đãi mới nhất từ chúng tôi.
               </p>
               <div className="newsletter-form-wrap">
                 <form action="#" method="post" onSubmit={(e) => e.preventDefault()}>
                   <div className="form-content">
-                    <input type="email" placeholder="Enter your email here" />
-                    <button className="btn-newsletter">Submit</button>
+                    <input type="email" placeholder="Nhập email của bạn tại đây" />
+                    <button className="btn-newsletter">Gửi</button>
                   </div>
                 </form>
               </div>

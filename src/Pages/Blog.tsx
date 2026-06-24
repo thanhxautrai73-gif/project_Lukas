@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Blog = () => {
     return (
         <div>
@@ -8,10 +10,10 @@ const Blog = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Blog</h1>
+              <h1>Tin Tức</h1>
               <ul className="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li className="current"><a href="#">Blog</a></li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li className="current">Tin Tức</li>
               </ul>
             </div>
           </div>
@@ -31,188 +33,172 @@ const Blog = () => {
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-1.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-1.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>01</span>
-                        <span>Jun</span>
+                        <span>Th6</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">GM is About to Surprise
-                          with</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">GM sắp gây bất ngờ với dòng xe mới</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-2.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-2.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>28</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">Common Engine Oil
-                          Problems</a></h2>
-                      <p className="post-excerpt">Under-inflation of tires can cause premature and uneven
-                        tire wear, excess fuel</p>
+                      <h2 className="post-title"><Link to="/blog-details">Các vấn đề thường gặp về dầu động cơ</Link></h2>
+                      <p className="post-excerpt">Lốp xe thiếu hơi có thể gây mòn lốp sớm và không đều, tiêu tốn thêm nhiên liệu...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-3.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-3.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">Modern technology for
-                          making</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">Công nghệ hiện đại trong sản xuất phụ tùng</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-4.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-4.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">Electric Car Services And
-                          Their</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">Dịch vụ xe điện và những lợi ích đi kèm</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-5.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-5.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">Common Engine Oil
-                          Problems</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">Các vấn đề thường gặp về dầu động cơ</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-6.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-6.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">Can Brake Fluid Go Bad?</a>
+                      <h2 className="post-title"><Link to="/blog-details">Dầu phanh có bị hỏng theo thời gian không?</Link>
                       </h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-7.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-7.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">Ready for track day</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">Sẵn sàng cho ngày đua kịch tính</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-8.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-8.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">How to make your tires last
-                          8+</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">Cách làm lốp xe bền bỉ hơn 8 năm</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
                   <div className="blog-item">
                     <figure className="blog-item__thumb">
-                      <a href="blog-details.html"><img src="assets/img/blog/blog-9.jpg" alt="Blog" /></a>
+                      <Link to="/blog-details"><img src="assets/img/blog/blog-9.jpg" alt="Blog" /></Link>
                     </figure>
                     <div className="blog-item__info">
                       <div className="post-date">
                         <span>31</span>
-                        <span>May</span>
+                        <span>Th5</span>
                       </div>
                       <div className="post-meta">
-                        <span className="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
-                        <span className="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                        <span className="author">Tác giả: <Link to="/blog-details">Lukas</Link></span>
+                        <span className="comment">Bình luận: <Link to="/blog-details">3</Link></span>
                       </div>
-                      <h2 className="post-title"><a href="blog-details.html">When do I Change My
-                          Rotors?</a></h2>
-                      <p className="post-excerpt">There are simple hand-held tire-pressure gauges which
-                        can be temporarily attached to</p>
+                      <h2 className="post-title"><Link to="/blog-details">Khi nào tôi cần thay đĩa phanh?</Link></h2>
+                      <p className="post-excerpt">Có những thiết bị đo áp suất lốp cầm tay đơn giản có thể được gắn tạm thời vào...</p>
                     </div>
                   </div>
                 </div>
@@ -230,76 +216,76 @@ const Blog = () => {
           <div className="col-lg-3">
             <div className="sidebar-area">
               <div className="sidebar-item">
-                <h4 className="sidebar-title">Search</h4>
+                <h4 className="sidebar-title">Tìm kiếm</h4>
                 <div className="sidebar-body">
                   <div className="sidebar-search">
                     <form action="#" method="post">
-                      <input type="text" placeholder="search Here" />
+                      <input type="text" placeholder="Tìm kiếm tại đây" />
                       <button className="btn-src"><i className="fa fa-search" /></button>
                     </form>
                   </div>
                 </div>
               </div>
               <div className="sidebar-item">
-                <h4 className="sidebar-title">Categories</h4>
+                <h4 className="sidebar-title">Danh mục</h4>
                 <div className="sidebar-body">
                   <ul className="sidebar-list">
-                    <li><a href="#">Car Parts <span>(2)</span></a></li>
-                    <li><a href="#">Car seat cover <span>(3)</span></a></li>
-                    <li><a href="#">Repair <span>(6)</span></a></li>
-                    <li><a href="#">Tire <span>(2)</span></a></li>
-                    <li><a href="#">Oil <span>(11)</span></a></li>
-                    <li><a href="#">Uncategorized <span>(4)</span></a></li>
+                    <li><a href="#">Phụ tùng ô tô <span>(2)</span></a></li>
+                    <li><a href="#">Bọc ghế ô tô <span>(3)</span></a></li>
+                    <li><a href="#">Sửa chữa <span>(6)</span></a></li>
+                    <li><a href="#">Lốp xe <span>(2)</span></a></li>
+                    <li><a href="#">Dầu nhớt <span>(11)</span></a></li>
+                    <li><a href="#">Chưa phân loại <span>(4)</span></a></li>
                   </ul>
                 </div>
               </div>
               <div className="sidebar-item">
-                <h4 className="sidebar-title">Recent Post</h4>
+                <h4 className="sidebar-title">Bài viết gần đây</h4>
                 <div className="sidebar-body">
                   <div className="sidebar-product">
-                    <a href="blog-details.html" className="image"><img src="assets/img/blog/blog-1.jpg" alt="blog" /></a>
+                    <Link to="/blog-details" className="image"><img src="assets/img/blog/blog-1.jpg" alt="blog" /></Link>
                     <div className="content">
-                      <a href="blog-details.html" className="title">GM is About to Surprise with</a>
-                      <p>There are simple hand-held tire-pressure gauges which can..</p>
+                      <Link to="/blog-details" className="title">GM sắp gây bất ngờ với dòng xe mới</Link>
+                      <p>Có những thiết bị đo áp suất lốp cầm tay đơn giản...</p>
                     </div>
                   </div>
                   <div className="sidebar-product">
-                    <a href="blog-details.html" className="image"><img src="assets/img/blog/blog-2.jpg" alt="blog" /></a>
+                    <Link to="/blog-details" className="image"><img src="assets/img/blog/blog-2.jpg" alt="blog" /></Link>
                     <div className="content">
-                      <a href="blog-details.html" className="title">Common Engine Oil Problems</a>
-                      <p>Under-inflation of tires can cause premature and uneven...</p>
+                      <Link to="/blog-details" className="title">Các vấn đề thường gặp về dầu động cơ</Link>
+                      <p>Lốp xe thiếu hơi có thể gây mòn lốp sớm...</p>
                     </div>
                   </div>
                   <div className="sidebar-product">
-                    <a href="blog-details.html" className="image"><img src="assets/img/blog/blog-3.jpg" alt="blog" /></a>
+                    <Link to="/blog-details" className="image"><img src="assets/img/blog/blog-3.jpg" alt="blog" /></Link>
                     <div className="content">
-                      <a href="blog-details.html" className="title">Modern technology for making</a>
-                      <p>Tire maintenance for motor vehicles is based on.</p>
+                      <Link to="/blog-details" className="title">Công nghệ hiện đại trong sản xuất</Link>
+                      <p>Bảo trì lốp cho các phương tiện cơ giới dựa trên...</p>
                     </div>
                   </div>
                   <div className="sidebar-product">
-                    <a href="blog-details.html" className="image"><img src="assets/img/blog/blog-4.jpg" alt="blog" /></a>
+                    <Link to="/blog-details" className="image"><img src="assets/img/blog/blog-4.jpg" alt="blog" /></Link>
                     <div className="content">
-                      <a href="blog-details.html" className="title">Common Engine Oil Problems</a>
-                      <p>Under-inflation of tires can cause premature and uneven...</p>
+                      <Link to="/blog-details" className="title">Dịch vụ xe điện và những lợi ích</Link>
+                      <p>Lốp xe thiếu hơi có thể gây mòn lốp sớm...</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="sidebar-item">
-                <h4 className="sidebar-title">Tags</h4>
+                <h4 className="sidebar-title">Thẻ</h4>
                 <div className="sidebar-body">
                   <ul className="tags">
-                    <li><a href="#">Car</a></li>
-                    <li><a href="#">Parts</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Tayer</a></li>
-                    <li><a href="#">Seat</a></li>
-                    <li><a href="#">Engine</a></li>
-                    <li><a href="#">Parts</a></li>
-                    <li><a href="#">Fuel</a></li>
-                    <li><a href="#">Modern</a></li>
-                    <li><a href="#">Brake</a></li>
+                    <li><a href="#">Ô tô</a></li>
+                    <li><a href="#">Phụ tùng</a></li>
+                    <li><a href="#">Cửa hàng</a></li>
+                    <li><a href="#">Lốp xe</a></li>
+                    <li><a href="#">Ghế</a></li>
+                    <li><a href="#">Động cơ</a></li>
+                    <li><a href="#">Phụ tùng</a></li>
+                    <li><a href="#">Nhiên liệu</a></li>
+                    <li><a href="#">Hiện đại</a></li>
+                    <li><a href="#">Phanh</a></li>
                   </ul>
                 </div>
               </div>

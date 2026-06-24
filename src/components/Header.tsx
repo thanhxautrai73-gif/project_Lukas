@@ -68,51 +68,51 @@ const Header = () => {
         <div className="site-navigation">
           <ul className="main-menu nav">
             <li className="has-submenu">
-              {renderLink("/", "Home", true)}
+              {renderLink("/", "Trang Chủ", true)}
               <ul className="sub-menu">
-                <li>{renderLink("/", "Home 1", true)}</li>
-                <li>{renderLink("/home1", "Home 2")}</li>
-                <li>{renderLink("/home-box-layout", "Home Box Layout")}</li>
+                <li>{renderLink("/", "Trang Chủ 1", true)}</li>
+                <li>{renderLink("/home1", "Trang Chủ 2")}</li>
+                <li>{renderLink("/home-box-layout", "Bố Cục Hộp")}</li>
               </ul>
             </li>
-            <li>{renderLink("/about", "About")}</li>
+            <li>{renderLink("/about", "Giới Thiệu")}</li>
             <li className="has-submenu">
-              {renderLink("/shop", "Shop")}
+              {renderLink("/shop", "Cửa Hàng")}
               <ul className="sub-menu">
-                <li>{renderLink("/shop-left-sidebar", "Shop Left Sidebar")}</li>
-                <li>{renderLink("/shop-right-sidebar", "Shop Right Sidebar")}</li>
-                <li>{renderLink("/single-product", "Single Product")}</li>
+                <li>{renderLink("/shop-left-sidebar", "Cửa Hàng Thanh Bên Trái")}</li>
+                <li>{renderLink("/shop-right-sidebar", "Cửa Hàng Thanh Bên Phải")}</li>
+                <li>{renderLink("/single-product", "Chi Tiết Sản Phẩm")}</li>
               </ul>
             </li>
             <li className="has-submenu">
-              {renderLink("/blog", "Blog")}
+              {renderLink("/blog", "Tin Tức")}
               <ul className="sub-menu">
-                <li>{renderLink("/blog-left-sidebar", "Blog Left Sidebar")}</li>
-                <li>{renderLink("/blog", "Blog Right Sidebar")}</li>
-                <li>{renderLink("/blog-details", "Single Blog")}</li>
-                <li>{renderLink("/blog-details-sidebar", "Single Blog Sidebar")}</li>
+                <li>{renderLink("/blog-left-sidebar", "Tin Tức Thanh Bên Trái")}</li>
+                <li>{renderLink("/blog", "Tin Tức Thanh Bên Phải")}</li>
+                <li>{renderLink("/blog-details", "Chi Tiết Tin Tức")}</li>
+                <li>{renderLink("/blog-details-sidebar", "Chi Tiết Tin Tức Thanh Bên")}</li>
               </ul>
             </li>
-            <li>{renderLink("/gallery", "Gallery")}</li>
+            <li>{renderLink("/gallery", "Bộ Sưu Tập")}</li>
             <li className="has-submenu">
-              {renderLink("/pages", "Pages")}
+              {renderLink("/pages", "Trang")}
               <ul className="sub-menu">
-                <li>{renderLink("/cart", "Cart")}</li>
-                <li>{renderLink("/checkout", "Checkout")}</li>
-                <li>{renderLink("/wishlist", "Wishlist")}</li>
-                <li>{renderLink("/login", "Login")}</li>
-                <li>{renderLink("/register", "Register")}</li>
+                <li>{renderLink("/cart", "Giỏ Hàng")}</li>
+                <li>{renderLink("/checkout", "Thanh Toán")}</li>
+                <li>{renderLink("/wishlist", "Danh Sách Yêu Thích")}</li>
+                <li>{renderLink("/login", "Đăng Nhập")}</li>
+                <li>{renderLink("/register", "Đăng Ký")}</li>
               </ul>
             </li>
-            <li>{renderLink("/contact", "Contact")}</li>
+            <li>{renderLink("/contact", "Liên Hệ")}</li>
           </ul>
         </div>
       </div>
       <div className="col-sm-8 col-lg-3">
         <div className="site-action d-flex justify-content-center justify-content-sm-end align-items-center">
           <ul className="login-reg-nav nav">
-            <li>{renderLink("/login", "Login")}</li>
-            <li>{renderLink("/register", "Register")}</li>
+            <li>{renderLink("/login", "Đăng Nhập")}</li>
+            <li>{renderLink("/register", "Đăng Ký")}</li>
           </ul>
           <div className="mini-cart-wrap">
             <Link to="/cart" className="btn-mini-cart">
@@ -137,18 +137,18 @@ const Header = () => {
                     </div>
                   ))
                 ) : (
-                  <p className="text-center">Your cart is empty</p>
+                  <p className="text-center">Giỏ hàng của bạn đang trống</p>
                 )}
               </div>
               {cart.length > 0 && (
                 <div className="mini-cart-footer">
                   <div className="cart-subtotal">
-                    <span>Subtotal:</span>
+                    <span>Tổng phụ:</span>
                     <span className="total-price">${getTotalPrice().toFixed(2)}</span>
                   </div>
                   <div className="cart-action">
-                    <Link to="/cart" className="btn btn-brand">View Cart</Link>
-                    <Link to="/checkout" className="btn btn-brand">Checkout</Link>
+                    <Link to="/cart" className="btn btn-brand">Xem Giỏ Hàng</Link>
+                    <Link to="/checkout" className="btn btn-brand">Thanh Toán</Link>
                   </div>
                 </div>
               )}

@@ -8,7 +8,7 @@ const SingleProduct = () => {
 
     const product = {
       id: 103,
-      name: 'Hanging 4K Camera',
+      name: 'Camera 4K Treo',
       price: 325.00,
       image: '/assets/img/product/product-4.png'
     }
@@ -18,7 +18,7 @@ const SingleProduct = () => {
       for (let i = 0; i < quantity; i++) {
         addToCart(product)
       }
-      alert(`${quantity} ${product.name} added to cart!`)
+      alert(`${quantity} ${product.name} đã được thêm vào giỏ hàng!`)
     }
 
     const increment = (e: React.MouseEvent) => {
@@ -40,11 +40,11 @@ const SingleProduct = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Product Details</h1>
+              <h1>Chi Tiết Sản Phẩm</h1>
               <ul className="breadcrumb">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/shop">Shop</Link></li>
-                <li className="current">Product Details</li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li><Link to="/shop">Cửa Hàng</Link></li>
+                <li className="current">Chi Tiết Sản Phẩm</li>
               </ul>
             </div>
           </div>
@@ -95,31 +95,29 @@ const SingleProduct = () => {
                 <div className="product-details-info-content-wrap">
                   <div className="prod-details-info-content">
                     <h2>{product.name}</h2>
-                    <h5 className="price"><strong>Price:</strong> <span className="price-amount">${product.price.toFixed(2)}</span>
+                    <h5 className="price"><strong>Giá:</strong> <span className="price-amount">${product.price.toFixed(2)}</span>
                     </h5>
-                    <p>Pursue pleasure rationally encounter consequences that are extremely painful. Nor
-                      again is there anyone who loves or pursues or desires to obtain pain of itself,
-                      because it is pain, but because occasionally circles</p>
+                    <p>Theo đuổi sự hài lòng một cách hợp lý sẽ mang lại những kết quả cực kỳ giá trị. Không ai yêu thích hoặc theo đuổi nỗi đau cho chính nó, mà vì đôi khi những cơ hội mới sẽ xuất hiện.</p>
                     <div className="product-config">
                       <div className="table-responsive">
                         <table className="table table-bordered">
                           <tbody><tr>
-                              <th className="config-label">Color</th>
+                              <th className="config-label">Màu sắc</th>
                               <td className="config-option">
                                 <div className="config-color">
-                                  <a href="#" onClick={(e) => e.preventDefault()}>Black</a>
-                                  <a href="#" onClick={(e) => e.preventDefault()}>Blue</a>
-                                  <a href="#" onClick={(e) => e.preventDefault()}>Green</a>
+                                  <a href="#" onClick={(e) => e.preventDefault()}>Đen</a>
+                                  <a href="#" onClick={(e) => e.preventDefault()}>Xanh dương</a>
+                                  <a href="#" onClick={(e) => e.preventDefault()}>Xanh lá</a>
                                 </div>
                               </td>
                             </tr>
                             <tr>
-                              <th className="config-label">Size</th>
+                              <th className="config-label">Kích thước</th>
                               <td className="config-option">
                                 <div className="config-color">
-                                  <a href="#" onClick={(e) => e.preventDefault()}>Large</a>
-                                  <a href="#" onClick={(e) => e.preventDefault()}>Medium</a>
-                                  <a href="#" onClick={(e) => e.preventDefault()}>Small</a>
+                                  <a href="#" onClick={(e) => e.preventDefault()}>Lớn</a>
+                                  <a href="#" onClick={(e) => e.preventDefault()}>Vừa</a>
+                                  <a href="#" onClick={(e) => e.preventDefault()}>Nhỏ</a>
                                 </div>
                               </td>
                             </tr>
@@ -150,15 +148,15 @@ const SingleProduct = () => {
                             style={{ border: 'none', background: '#f8f8f8', padding: '5px 15px', fontSize: '20px', cursor: 'pointer' }}
                           >+</button>
                         </div>
-                        <button className="btn btn-brand" onClick={handleAddToCart}>Add to Cart</button>
+                        <button className="btn btn-brand" onClick={handleAddToCart}>Thêm vào giỏ</button>
                       </div>
                     </div>
                     <div className="product-meta">
-                      <span className="sku_wrapper">SKU: <span className="sku">N/A</span></span>
-                      <span className="posted_in">Categories:
-                        <Link to="/shop">Best Seller,</Link>
-                        <Link to="/shop">Parts,</Link>
-                        <Link to="/shop">Shop</Link>
+                      <span className="sku_wrapper">Mã sản phẩm: <span className="sku">N/A</span></span>
+                      <span className="posted_in">Danh mục:
+                        <Link to="/shop"> Bán chạy,</Link>
+                        <Link to="/shop"> Phụ tùng,</Link>
+                        <Link to="/shop"> Cửa hàng</Link>
                       </span>
                     </div>
                   </div>

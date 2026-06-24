@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const login = () => {
   return (
    <div>
@@ -8,11 +10,11 @@ const login = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Login</h1>
+              <h1>Đăng Nhập</h1>
               <ul className="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Pages</a></li>
-                <li className="current"><a href="#">Login</a></li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li><Link to="/pages">Trang</Link></li>
+                <li className="current">Đăng Nhập</li>
               </ul>
             </div>
           </div>
@@ -29,15 +31,15 @@ const login = () => {
           <div className="col-lg-8 col-md-12 ml-auto mr-auto">
             <div className="login-form-style">
               <form action="#" method="post">
-                <input type="text" name="user-name" placeholder="Username" />
-                <input type="password" name="user-password" placeholder="Password" />
+                <input type="text" name="user-name" placeholder="Tên đăng nhập" />
+                <input type="password" name="user-password" placeholder="Mật khẩu" />
                 <div className="login-toggle-btn">
                   <input id="login-check" type="checkbox" />
-                  <label htmlFor="login-check">Remember me</label>
-                  <a href="#">Forgot Password?</a>
+                  <label htmlFor="login-check">Ghi nhớ tôi</label>
+                  <a href="#">Quên mật khẩu?</a>
                 </div>
                 <div className="login-btn">
-                  <button type="submit">Login</button>
+                  <button type="submit">Đăng Nhập</button>
                 </div>
               </form>
             </div>

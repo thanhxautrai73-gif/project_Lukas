@@ -15,9 +15,9 @@ const Pages = () => {
                   <div className="col-lg-6">
                     <div className="slide-content">
                       <div className="slide-content-inner">
-                        <h3>NEW TECHNOLOGY & BUILD</h3>
-                        <h2>WHEELS & TIRES COLLECTIONS</h2>
-                        <Link className="btn btn-white" to="/shop">Shop Now</Link>
+                        <h3>CÔNG NGHỆ & THIẾT KẾ MỚI</h3>
+                        <h2>BỘ SƯU TẬP BÁNH XE & LỐP XE</h2>
+                        <Link className="btn btn-white" to="/shop">Mua Ngay</Link>
                       </div>
                     </div>
                   </div>
@@ -30,9 +30,9 @@ const Pages = () => {
                   <div className="col-12">
                     <div className="slide-content">
                       <div className="slide-content-inner">
-                        <h3>NEW TECHNOLOGY & BUILD</h3>
-                        <h2>WHEELS & TIRES <br /> COLLECTIONS</h2>
-                        <Link className="btn btn-white" to="/shop">Shop Now</Link>
+                        <h3>CÔNG NGHỆ & THIẾT KẾ MỚI</h3>
+                        <h2>BỘ SƯU TẬP <br /> BÁNH XE & LỐP XE</h2>
+                        <Link className="btn btn-white" to="/shop">Mua Ngay</Link>
                       </div>
                     </div>
                   </div>
@@ -81,8 +81,8 @@ const Pages = () => {
                     <img src="/assets/img/icons/icon-1.png" alt="fast delivery" />
                   </div>
                   <div className="call-to-action-item__info">
-                    <h3>Free Home Delivery</h3>
-                    <p>Provide free home delivery for all product over $100</p>
+                    <h3>Giao Hàng Miễn Phí</h3>
+                    <p>Giao hàng tận nhà miễn phí cho đơn hàng trên $100</p>
                   </div>
                 </div>
               </div>
@@ -92,8 +92,8 @@ const Pages = () => {
                     <img src="/assets/img/icons/icon-2.png" alt="quality" />
                   </div>
                   <div className="call-to-action-item__info">
-                    <h3>Quality Products</h3>
-                    <p>We ensure our product quality all times</p>
+                    <h3>Sản Phẩm Chất Lượng</h3>
+                    <p>Chúng tôi luôn đảm bảo chất lượng sản phẩm</p>
                   </div>
                 </div>
               </div>
@@ -103,8 +103,8 @@ const Pages = () => {
                     <img src="/assets/img/icons/icon-3.png" alt="return" />
                   </div>
                   <div className="call-to-action-item__info">
-                    <h3>Online Support</h3>
-                    <p>To satisfy our customer we try to give support online</p>
+                    <h3>Hỗ Trợ Trực Tuyến</h3>
+                    <p>Chúng tôi luôn sẵn sàng hỗ trợ khách hàng trực tuyến</p>
                   </div>
                 </div>
               </div>
@@ -120,15 +120,15 @@ const Pages = () => {
               <div className="row">
                 <div className="col-lg-8 col-xl-5 m-auto">
                   <div className="newsletter-content text-center">
-                    <h4>SPECIAL <span>OFFER</span> FOR SUBSCRIPTION</h4>
-                    <h2>GET INSTANT DISCOUNT FOR MEMBERSHIP</h2>
-                    <p>Subscribe our newsletter and all latest news of our <br />latest product, promotion and offers
+                    <h4>ƯU ĐÃI <span>ĐẶC BIỆT</span> KHI ĐĂNG KÝ</h4>
+                    <h2>NHẬN GIẢM GIÁ TỨC THÌ CHO THÀNH VIÊN</h2>
+                    <p>Đăng ký nhận bản tin để cập nhật những sản phẩm, <br />khuyến mãi và ưu đãi mới nhất từ chúng tôi.
                     </p>
                     <div className="newsletter-form-wrap">
                       <form action="#" method="post" onSubmit={(e) => e.preventDefault()}>
                         <div className="form-content">
-                          <input type="email" placeholder="Enter your email here" />
-                          <button className="btn-newsletter">Submit</button>
+                          <input type="email" placeholder="Nhập email của bạn tại đây" />
+                          <button className="btn-newsletter">Gửi</button>
                         </div>
                       </form>
                     </div>

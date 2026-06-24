@@ -24,11 +24,11 @@ const Cart = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Shopping Cart</h1>
+              <h1>Giỏ Hàng</h1>
               <ul className="breadcrumb">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/shop">Shop</Link></li>
-                <li className="current">Cart</li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li><Link to="/shop">Cửa Hàng</Link></li>
+                <li className="current">Giỏ Hàng</li>
               </ul>
             </div>
           </div>
@@ -48,18 +48,18 @@ const Cart = () => {
                 <table className="table table-bordered text-center mb-0">
                   <thead>
                     <tr>
-                      <th>Products</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
+                      <th>Sản phẩm</th>
+                      <th>Giá</th>
+                      <th>Số lượng</th>
+                      <th>Tổng cộng</th>
                     </tr>
                   </thead>
                   <tbody>
                     {cart.length === 0 ? (
                       <tr>
                         <td colSpan={4} className="text-center py-5">
-                          <p className="lead">Your cart is empty</p>
-                          <Link to="/shop" className="btn btn-brand mt-3">Continue Shopping</Link>
+                          <p className="lead">Giỏ hàng của bạn đang trống</p>
+                          <Link to="/shop" className="btn btn-brand mt-3">Tiếp tục mua sắm</Link>
                         </td>
                       </tr>
                     ) : (
@@ -113,14 +113,14 @@ const Cart = () => {
                     <div className="cart-coupon-update-area d-sm-flex justify-content-between align-items-center">
                       <div className="coupon-form-wrap">
                         <form onSubmit={(e) => e.preventDefault()}>
-                          <label htmlFor="coupon" className="sr-only">Coupon Code</label>
-                          <input type="text" id="coupon" placeholder="Coupon Code" />
-                          <button className="btn-apply">Apply Coupon</button>
+                          <label htmlFor="coupon" className="sr-only">Mã giảm giá</label>
+                          <input type="text" id="coupon" placeholder="Mã giảm giá" />
+                          <button className="btn-apply">Áp dụng</button>
                         </form>
                       </div>
                       <div className="cart-update-buttons mt-15 mt-sm-0">
-                        <button className="btn-clear-cart" onClick={clearCart} disabled={cart.length === 0}>Clear Cart</button>
-                        <Link to="/shop" className="btn-update-cart">Continue Shopping</Link>
+                        <button className="btn-clear-cart" onClick={clearCart} disabled={cart.length === 0}>Xóa giỏ hàng</button>
+                        <Link to="/shop" className="btn-update-cart">Tiếp tục mua sắm</Link>
                       </div>
                     </div>
             </div>
@@ -128,36 +128,36 @@ const Cart = () => {
           <div className="col-lg-4">
             {/* Cart Calculate Area */}
             <div className="cart-calculate-area mt-sm-40 mt-md-60">
-              <h5 className="cal-title">Cart Totals</h5>
+              <h5 className="cal-title">Tổng giỏ hàng</h5>
               <div className="cart-cal-table table-responsive">
                 <table className="table table-borderless">
                     <tbody>
                     <tr className="cart-sub-total">
-                        <th>Subtotal</th>
+                        <th>Tổng phụ</th>
                         <td>${subtotal.toFixed(2)}</td>
                       </tr>
                     <tr className="shipping">
-                      <th>Shipping</th>
+                      <th>Giao hàng</th>
                       <td>
                         <ul className="shipping-method">
                           <li>
                             <div className="form-check">
                               <input type="radio" id="flat_shipping" name="shipping_method" className="form-check-input" defaultChecked />
-                              <label className="form-check-label" htmlFor="flat_shipping">Flat Rate : $10</label>
+                              <label className="form-check-label" htmlFor="flat_shipping">Phí cố định : $10</label>
                             </div>
                           </li>
                         </ul>
                       </td>
                     </tr>
                       <tr className="order-total">
-                        <th>Total</th>
+                        <th>Tổng cộng</th>
                         <td><b>${total.toFixed(2)}</b></td>
                       </tr>
                   </tbody></table>
               </div>
                   <div className="proceed-checkout-btn">
                     <button className="btn btn-brand d-block w-100" onClick={handleCheckout} disabled={cart.length === 0}>
-                      Proceed to Checkout
+                      Tiến hành thanh toán
                     </button>
                   </div>
             </div>

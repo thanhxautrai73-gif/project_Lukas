@@ -9,18 +9,18 @@ const Shop = () => {
         e.preventDefault()
         e.stopPropagation()
         addToCart(product)
-        alert(`${product.name} has been added to your cart!`)
+        alert(`${product.name} đã được thêm vào giỏ hàng!`)
     }
 
     const products = [
-      { id: 1, name: 'Auto Clutch & Brake', price: 165.00, image: '/assets/img/product/product-6.png', secondaryImage: '/assets/img/product/product-7.png', sale: '25%' },
-      { id: 2, name: '17 INCH RIMS 8 LUG', price: 235.00, image: '/assets/img/product/product-2.png', secondaryImage: '/assets/img/product/product-3.png' },
-      { id: 3, name: 'AIR INTAKE SYSTEM', price: 125.00, image: '/assets/img/product/product-4.png', secondaryImage: '/assets/img/product/product-5.png', sale: '35%' },
-      { id: 4, name: 'LEATHER STEERING WHEEL', price: 25.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-10.png', sale: '15%' },
-      { id: 5, name: 'Brake Disc Plate', price: 165.00, image: '/assets/img/product/product-13.png', secondaryImage: '/assets/img/product/product-7.png' },
-      { id: 6, name: '18 INCH RIMS 8 LUG', price: 235.00, image: '/assets/img/product/product-3.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
-      { id: 7, name: 'Turbo Intake System', price: 125.00, image: '/assets/img/product/product-7.png', secondaryImage: '/assets/img/product/product-9.png' },
-      { id: 8, name: 'Sport Steering Wheel', price: 25.00, image: '/assets/img/product/product-12.png', secondaryImage: '/assets/img/product/product-13.png', sale: '11%' },
+      { id: 1, name: 'Bộ Côn & Phanh Tự Động', price: 165.00, image: '/assets/img/product/product-6.png', secondaryImage: '/assets/img/product/product-7.png', sale: '25%' },
+      { id: 2, name: 'Vành 17 inch 8 Lug', price: 235.00, image: '/assets/img/product/product-2.png', secondaryImage: '/assets/img/product/product-3.png' },
+      { id: 3, name: 'Hệ Thống Hút Khí', price: 125.00, image: '/assets/img/product/product-4.png', secondaryImage: '/assets/img/product/product-5.png', sale: '35%' },
+      { id: 4, name: 'Vô Lăng Bọc Da', price: 25.00, image: '/assets/img/product/product-11.png', secondaryImage: '/assets/img/product/product-10.png', sale: '15%' },
+      { id: 5, name: 'Đĩa Phanh', price: 165.00, image: '/assets/img/product/product-13.png', secondaryImage: '/assets/img/product/product-7.png' },
+      { id: 6, name: 'Vành 18 inch 8 Lug', price: 235.00, image: '/assets/img/product/product-3.png', secondaryImage: '/assets/img/product/product-2.png', sale: '25%' },
+      { id: 7, name: 'Hệ Thống Hút Turbo', price: 125.00, image: '/assets/img/product/product-7.png', secondaryImage: '/assets/img/product/product-9.png' },
+      { id: 8, name: 'Vô Lăng Thể Thao', price: 25.00, image: '/assets/img/product/product-12.png', secondaryImage: '/assets/img/product/product-13.png', sale: '11%' },
     ]
 
     return (
@@ -32,10 +32,10 @@ const Shop = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Shop</h1>
+              <h1>Cửa Hàng</h1>
               <ul className="breadcrumb">
-                <li><Link to="/">Home</Link></li>
-                <li className="current">Shop</li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li className="current">Cửa Hàng</li>
               </ul>
             </div>
           </div>
@@ -60,12 +60,12 @@ const Shop = () => {
             </div>
             <div className="col-sm-6">
               <div className="sort-by-wrapper">
-                <label htmlFor="sort" className="sr-only">Sort By</label>
+                <label htmlFor="sort" className="sr-only">Sắp xếp theo</label>
                 <select name="sort" id="sort">
-                  <option value="sbp">Sort By Popularity</option>
-                  <option value="sbn">Sort By Newest</option>
-                  <option value="sbt">Sort By Trending</option>
-                  <option value="sbr">Sort By Rating</option>
+                  <option value="sbp">Sắp xếp theo độ phổ biến</option>
+                  <option value="sbn">Sắp xếp theo mới nhất</option>
+                  <option value="sbt">Sắp xếp theo xu hướng</option>
+                  <option value="sbr">Sắp xếp theo đánh giá</option>
                 </select>
               </div>
             </div>
@@ -96,7 +96,7 @@ const Shop = () => {
                   <div className="product-item__content">
                     <div className="product-item__info">
                       <h4 className="title"><Link to="/single-product">{product.name}</Link></h4>
-                      <span className="price"><strong>Price:</strong> ${product.price.toFixed(2)}</span>
+                      <span className="price"><strong>Giá:</strong> ${product.price.toFixed(2)}</span>
                     </div>
                     <div className="product-item__action">
                       <button className="btn-add-to-cart" onClick={(e) => handleAddToCart(e, { id: product.id, name: product.name, price: product.price, image: product.image })}><i className="ion-bag" /></button>
@@ -105,9 +105,7 @@ const Shop = () => {
                       <button className="btn-add-to-cart"><i className="ion-eye" /></button>
                     </div>
                     <div className="product-item__desc">
-                      <p>Pursue pleasure rationally encounter consequences that are extremely painful. Nor
-                        again is there anyone who loves or pursues or desires to obtain pain of itself,
-                        because it is pain, but because occasionally circles</p>
+                      <p>Theo đuổi sự hài lòng một cách hợp lý sẽ mang lại những kết quả cực kỳ giá trị. Không ai yêu thích hoặc theo đuổi nỗi đau cho chính nó, mà vì đôi khi những cơ hội mới sẽ xuất hiện.</p>
                     </div>
                   </div>
                   {product.sale && (
@@ -137,7 +135,7 @@ const Shop = () => {
               </nav>
             </div>
             <div className="col-sm-6 text-center text-sm-end">
-              <p>Showing 1–{products.length} of 26 results</p>
+              <p>Hiển thị 1–{products.length} trong số 26 kết quả</p>
             </div>
           </div>
         </div>

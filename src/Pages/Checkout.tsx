@@ -21,9 +21,9 @@ const Checkout = () => {
     return (
       <div className="page-content-wrapper sp-y">
         <div className="container text-center">
-          <h2>Your cart is empty!</h2>
-          <p>Please add some products to your cart before checking out.</p>
-          <Link to="/shop" className="btn btn-brand mt-3">Go to Shop</Link>
+          <h2>Giỏ hàng của bạn đang trống!</h2>
+          <p>Vui lòng thêm một số sản phẩm vào giỏ hàng trước khi thanh toán.</p>
+          <Link to="/shop" className="btn btn-brand mt-3">Đi đến Cửa Hàng</Link>
         </div>
       </div>
     )
@@ -38,11 +38,11 @@ const Checkout = () => {
         <div className="col-12 text-center">
           <div className="page-header-content">
             <div className="page-header-content-inner">
-              <h1>Checkout</h1>
+              <h1>Thanh Toán</h1>
               <ul className="breadcrumb">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/shop">Shop</Link></li>
-                <li className="current">Checkout</li>
+                <li><Link to="/">Trang Chủ</Link></li>
+                <li><Link to="/shop">Cửa Hàng</Link></li>
+                <li className="current">Thanh Toán</li>
               </ul>
             </div>
           </div>
@@ -60,41 +60,41 @@ const Checkout = () => {
             <div className="col-lg-6">
               {/* Checkout Form Area Start */}
               <div className="checkout-billing-details-wrap">
-                <h2>Billing Details</h2>
+                <h2>Chi Tiết Thanh Toán</h2>
                 <div className="billing-form-wrap">
                     <div className="row">
                       <div className="col-md-6">
                         <div className="input-item mt-0">
-                          <label htmlFor="f_name" className="sr-only required">First Name</label>
-                          <input type="text" id="f_name" placeholder="First Name" required />
+                          <label htmlFor="f_name" className="sr-only required">Tên</label>
+                          <input type="text" id="f_name" placeholder="Tên" required />
                         </div>
                       </div>
                       <div className="col-md-6">
                         <div className="input-item mt-md-0">
-                          <label htmlFor="l_name" className="sr-only required">Last Name</label>
-                          <input type="text" id="l_name" placeholder="Last Name" required />
+                          <label htmlFor="l_name" className="sr-only required">Họ</label>
+                          <input type="text" id="l_name" placeholder="Họ" required />
                         </div>
                       </div>
                     </div>
                     <div className="input-item">
-                      <label htmlFor="email" className="sr-only required">Email Address</label>
-                      <input type="email" id="email" placeholder="Email Address" required />
+                      <label htmlFor="email" className="sr-only required">Địa chỉ Email</label>
+                      <input type="email" id="email" placeholder="Địa chỉ Email" required />
                     </div>
                     <div className="input-item">
-                      <label htmlFor="street-address" className="sr-only required">Street address</label>
-                      <input type="text" id="street-address" placeholder="Street address Line 1" required />
+                      <label htmlFor="street-address" className="sr-only required">Địa chỉ đường phố</label>
+                      <input type="text" id="street-address" placeholder="Địa chỉ dòng 1" required />
                     </div>
                     <div className="input-item">
-                      <label htmlFor="town" className="sr-only required">Town / City</label>
-                      <input type="text" id="town" placeholder="Town / City" required />
+                      <label htmlFor="town" className="sr-only required">Tỉnh / Thành phố</label>
+                      <input type="text" id="town" placeholder="Tỉnh / Thành phố" required />
                     </div>
                     <div className="input-item">
-                      <label htmlFor="phone" className="sr-only">Phone</label>
-                      <input type="text" id="phone" placeholder="Phone" required />
+                      <label htmlFor="phone" className="sr-only">Số điện thoại</label>
+                      <input type="text" id="phone" placeholder="Số điện thoại" required />
                     </div>
                     <div className="input-item">
-                      <label htmlFor="ordernote" className="sr-only">Order Note</label>
-                      <textarea name="ordernote" id="ordernote" cols={30} rows={3} placeholder="Notes about your order, e.g. special notes for delivery." defaultValue={""} />
+                      <label htmlFor="ordernote" className="sr-only">Ghi chú đơn hàng</label>
+                      <textarea name="ordernote" id="ordernote" cols={30} rows={3} placeholder="Ghi chú về đơn hàng của bạn, ví dụ: ghi chú đặc biệt cho giao hàng." defaultValue={""} />
                     </div>
                 </div>
               </div>
@@ -102,13 +102,13 @@ const Checkout = () => {
             <div className="col-lg-6 col-xl-5 ml-auto">
               {/* Checkout Page Order Details */}
               <div className="order-details-area-wrap">
-                <h2>Your Order</h2>
+                <h2>Đơn Hàng Của Bạn</h2>
                 <div className="order-details-table table-responsive">
                   <table className="table table-borderless">
                     <thead>
                       <tr>
-                        <th>Products</th>
-                        <th>Total</th>
+                        <th>Sản phẩm</th>
+                        <th>Tổng cộng</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -121,39 +121,38 @@ const Checkout = () => {
                     </tbody>
                     <tfoot>
                       <tr className="cart-subtotal">
-                        <th>Subtotal</th>
+                        <th>Tổng phụ</th>
                         <td>${subtotal.toFixed(2)}</td>
                       </tr>
                       <tr className="shipping">
-                        <th>Shipping</th>
+                        <th>Giao hàng</th>
                         <td>
                           <ul className="shipping-method">
                             <li>
                               <div className="form-check">
                                 <input type="radio" id="flat_shipping" name="shipping_method" className="form-check-input" defaultChecked />
-                                <label className="form-check-label" htmlFor="flat_shipping">Flat Rate : $10</label>
+                                <label className="form-check-label" htmlFor="flat_shipping">Phí cố định : $10</label>
                               </div>
                             </li>
                           </ul>
                         </td>
                       </tr>
                       <tr className="final-total">
-                        <th>Total</th>
+                        <th>Tổng cộng</th>
                         <td><span className="total-amount">${total.toFixed(2)}</span></td>
                       </tr>
                     </tfoot>
                   </table>
                 </div>
                 <div className="order-details-footer">
-                  <p>Your personal data will be used to process your order, support your experience throughout
-                    this website, and for other purposes described in our
-                    <a href="#" className="text-warning">privacy policy</a>.
+                  <p>Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn hàng, hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong 
+                    <a href="#" className="text-warning"> chính sách bảo mật</a> của chúng tôi.
                   </p>
                   <div className="form-check mt-10">
                     <input type="checkbox" id="privacy" className="form-check-input" required />
-                    <label htmlFor="privacy" className="form-check-label">I have read and agree to the website terms and conditions</label>
+                    <label htmlFor="privacy" className="form-check-label">Tôi đã đọc và đồng ý với các điều khoản và điều kiện của trang web</label>
                   </div>
-                  <button type="submit" className="btn btn-brand mt-40 w-100">Place Order</button>
+                  <button type="submit" className="btn btn-brand mt-40 w-100">Đặt Hàng</button>
                 </div>
               </div>
             </div>
