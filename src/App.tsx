@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./Pages/Home";
@@ -30,6 +31,12 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import ThankYou from "./Pages/ThankYou";
 
+declare global {
+  interface Window {
+    initActiveJs?: () => void;
+  }
+}
+
 // Component to handle scroll to top and re-initialize legacy scripts on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -38,8 +45,8 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
     // Re-initialize active.js scripts after a short delay to ensure DOM is ready
     const timer = setTimeout(() => {
-      if ((window as any).initActiveJs) {
-        (window as any).initActiveJs();
+      if (window.initActiveJs) {
+        window.initActiveJs();
       }
     }, 100);
 
@@ -52,17 +59,18 @@ const ScrollToTop = () => {
 function App() {
   useEffect(() => {
     console.log("Đang thực hiện lệnh gọi API...");
-    fetch("http://localhost:5000/")
-      .then((res) => res.text())
+    fetch("/api")
+      .then((res) => res.json())
       .then((data) => console.log("Dữ liệu nhận được từ Server:", data))
       .catch((err) => console.error("Lỗi:", err));
   }, []);
   return (
-    <CartProvider>
-      <Router>
-        <ScrollToTop />
-        <Header />
-        <div style={{ paddingTop: "80px" }}></div>
+    <AuthProvider>
+      <CartProvider>
+        <Router>
+          <ScrollToTop />
+          <Header />
+          <div style={{ paddingTop: "80px" }}></div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home1" element={<Home1 />} />
@@ -92,6 +100,7 @@ function App() {
         <Footer />
       </Router>
     </CartProvider>
+   </AuthProvider>
   );
 }
 

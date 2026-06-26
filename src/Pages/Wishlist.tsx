@@ -14,7 +14,7 @@ const Wishlist = () => {
     { id: 107, name: 'Áo len đan dây', price: 39.99, image: '/assets/img/product/product-7.png', inStock: true },
   ]
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: { id: number; name: string; price: number; image: string }) => {
     addToCart({
       id: product.id,
       name: product.name,

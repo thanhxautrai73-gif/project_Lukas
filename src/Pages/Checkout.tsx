@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import axios from 'axios'
 
 const Checkout = () => {
   const navigate = useNavigate()
@@ -10,11 +11,51 @@ const Checkout = () => {
   const shipping = cart.length > 0 ? 10 : 0
   const total = subtotal + shipping
 
-  const handlePlaceOrder = (e: React.FormEvent) => {
+  const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate order placement
-    clearCart()
-    navigate('/thank-you')
+    
+    const form = e.currentTarget as HTMLFormElement
+    const f_name = (form.querySelector('#f_name') as HTMLInputElement).value
+    const l_name = (form.querySelector('#l_name') as HTMLInputElement).value
+    const email = (form.querySelector('#email') as HTMLInputElement).value
+    const streetAddress = (form.querySelector('#street-address') as HTMLInputElement).value
+    const town = (form.querySelector('#town') as HTMLInputElement).value
+    const phone = (form.querySelector('#phone') as HTMLInputElement).value
+    const orderNote = (form.querySelector('#ordernote') as HTMLTextAreaElement).value
+
+    const billingDetails = {
+      firstName: f_name,
+      lastName: l_name,
+      email,
+      streetAddress,
+      town,
+      phone,
+      orderNote
+    }
+
+    try {
+      const response = await axios.post('/api/orders', {
+        items: cart.map(item => ({
+          productId: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity
+        })),
+        totalAmount: total,
+        billingDetails
+      })
+      
+      alert(response.data.message || 'Đặt hàng thành công!')
+      clearCart()
+      navigate('/thank-you')
+    } catch (error) {
+      console.error('Lỗi đặt hàng:', error)
+      let msg = 'Có lỗi xảy ra khi xử lý đơn hàng của bạn. Vui lòng thử lại.'
+      if (axios.isAxiosError(error) && error.response?.data?.message) {
+        msg = error.response.data.message
+      }
+      alert(msg)
+    }
   }
 
   if (cart.length === 0) {

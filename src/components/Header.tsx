@@ -1,10 +1,12 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false)
     const { cart, removeFromCart, getTotalItems, getTotalPrice } = useCart()
+    const { user, logout } = useAuth()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -110,10 +112,36 @@ const Header = () => {
       </div>
       <div className="col-sm-8 col-lg-3">
         <div className="site-action d-flex justify-content-center justify-content-sm-end align-items-center">
-          <ul className="login-reg-nav nav">
-            <li>{renderLink("/login", "Đăng Nhập")}</li>
-            <li>{renderLink("/register", "Đăng Ký")}</li>
-          </ul>
+          {user ? (
+            <ul className="login-reg-nav nav align-items-center" style={{ gap: '12px' }}>
+              <li style={{ color: '#eeb644', fontWeight: '600', fontSize: '14px' }}>
+                Chào, {user.username}
+              </li>
+              <li>
+                <button 
+                  onClick={logout} 
+                  style={{ 
+                    background: 'none', 
+                    border: 'none', 
+                    color: '#333', 
+                    padding: 0, 
+                    cursor: 'pointer',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                  onMouseOver={(e) => (e.currentTarget.style.color = '#eeb644')}
+                  onMouseOut={(e) => (e.currentTarget.style.color = '#333')}
+                >
+                  Đăng Xuất
+                </button>
+              </li>
+            </ul>
+          ) : (
+            <ul className="login-reg-nav nav">
+              <li>{renderLink("/login", "Đăng Nhập")}</li>
+              <li>{renderLink("/register", "Đăng Ký")}</li>
+            </ul>
+          )}
           <div className="mini-cart-wrap">
             <Link to="/cart" className="btn-mini-cart">
               <i className="ion-bag" />

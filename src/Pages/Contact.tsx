@@ -1,6 +1,28 @@
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Contact = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    const name = (form.querySelector('#name') as HTMLInputElement).value
+    const email = (form.querySelector('#email') as HTMLInputElement).value
+    const subject = (form.querySelector('#subject') as HTMLInputElement).value
+    const message = (form.querySelector('#message') as HTMLTextAreaElement).value
+
+    try {
+      const response = await axios.post('/api/contact', { name, email, subject, message })
+      alert(response.data.message || 'Gửi tin nhắn thành công!')
+      form.reset()
+    } catch (error) {
+      console.error('Lỗi gửi tin nhắn:', error)
+      let msg = 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại.'
+      if (axios.isAxiosError(error) && error.response?.data?.message) {
+        msg = error.response.data.message
+      }
+      alert(msg)
+    }
+  }
     return (
         <div>
   {/*== Start Page Header Area ==*/}
@@ -74,7 +96,7 @@ const Contact = () => {
               <div className="contact-form-content">
                 <h2>Liên Lạc Với Chúng Tôi</h2>
                 <div className="contact-form-wrap">
-                  <form action="http://whizthemes.com/mail-php/raju/gariongso/mail.php" method="post" id="contact-form">
+                  <form onSubmit={handleSubmit} id="contact-form">
                     <div className="contact-form-inner">
                       <div className="row">
                         <div className="col-md-6">
