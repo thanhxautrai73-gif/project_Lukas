@@ -77,15 +77,15 @@ const AdminDashboard = () => {
             const headers = { Authorization: `Bearer ${token}` }
 
             // Fetch products
-            const prodRes = await axios.get('http://localhost:5000/api/products')
+            const prodRes = await axios.get('/api/products')
             setProducts(prodRes.data)
 
             // Fetch orders
-            const orderRes = await axios.get('http://localhost:5000/api/orders', { headers })
+            const orderRes = await axios.get('/api/orders', { headers })
             setOrders(orderRes.data)
 
             // Fetch users
-            const userRes = await axios.get('http://localhost:5000/api/users', { headers })
+            const userRes = await axios.get('/api/users', { headers })
             setUsers(userRes.data)
 
             setLoading(false)
@@ -138,16 +138,16 @@ const AdminDashboard = () => {
             }
 
             if (isEditingProduct) {
-                const res = await axios.put(`http://localhost:5000/api/products/${currentProductId}`, payload, { headers })
+                const res = await axios.put(`/api/products/${currentProductId}`, payload, { headers })
                 setMessage(res.data.message)
             } else {
-                const res = await axios.post('http://localhost:5000/api/products', payload, { headers })
+                const res = await axios.post('/api/products', payload, { headers })
                 setMessage(res.data.message)
             }
 
             // Reset form and reload
             handleOpenAddProduct()
-            const prodRes = await axios.get('http://localhost:5000/api/products')
+            const prodRes = await axios.get('/api/products')
             setProducts(prodRes.data)
         } catch (err: any) {
             setError(err.response?.data?.message || 'Không thể lưu sản phẩm.')
@@ -158,11 +158,11 @@ const AdminDashboard = () => {
         if (!window.confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')) return
         try {
             const headers = { Authorization: `Bearer ${token}` }
-            const res = await axios.delete(`http://localhost:5000/api/products/${productId}`, { headers })
+            const res = await axios.delete(`/api/products/${productId}`, { headers })
             setMessage(res.data.message)
             
             // Reload products
-            const prodRes = await axios.get('http://localhost:5000/api/products')
+            const prodRes = await axios.get('/api/products')
             setProducts(prodRes.data)
         } catch (err: any) {
             setError(err.response?.data?.message || 'Không thể xóa sản phẩm.')
@@ -173,11 +173,11 @@ const AdminDashboard = () => {
     const handleUpdateOrderStatus = async (orderId: string, status: string) => {
         try {
             const headers = { Authorization: `Bearer ${token}` }
-            const res = await axios.put(`http://localhost:5000/api/orders/${orderId}`, { status }, { headers })
+            const res = await axios.put(`/api/orders/${orderId}`, { status }, { headers })
             setMessage(res.data.message)
             
             // Reload orders
-            const orderRes = await axios.get('http://localhost:5000/api/orders', { headers })
+            const orderRes = await axios.get('/api/orders', { headers })
             setOrders(orderRes.data)
         } catch (err: any) {
             setError(err.response?.data?.message || 'Không thể cập nhật trạng thái đơn hàng.')
@@ -196,11 +196,11 @@ const AdminDashboard = () => {
 
         try {
             const headers = { Authorization: `Bearer ${token}` }
-            const res = await axios.put(`http://localhost:5000/api/users/${userId}`, { role: newRole }, { headers })
+            const res = await axios.put(`/api/users/${userId}`, { role: newRole }, { headers })
             setMessage(res.data.message)
             
             // Reload users
-            const userRes = await axios.get('http://localhost:5000/api/users', { headers })
+            const userRes = await axios.get('/api/users', { headers })
             setUsers(userRes.data)
         } catch (err: any) {
             setError(err.response?.data?.message || 'Không thể cập nhật vai trò.')
@@ -217,11 +217,11 @@ const AdminDashboard = () => {
 
         try {
             const headers = { Authorization: `Bearer ${token}` }
-            const res = await axios.delete(`http://localhost:5000/api/users/${userId}`, { headers })
+            const res = await axios.delete(`/api/users/${userId}`, { headers })
             setMessage(res.data.message)
             
             // Reload users
-            const userRes = await axios.get('http://localhost:5000/api/users', { headers })
+            const userRes = await axios.get('/api/users', { headers })
             setUsers(userRes.data)
         } catch (err: any) {
             setError(err.response?.data?.message || 'Không thể xóa tài khoản.')

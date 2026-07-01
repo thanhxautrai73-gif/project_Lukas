@@ -49,7 +49,7 @@ const Checkout = () => {
             total
         }
 
-        await axios.post('http://localhost:5000/api/orders', orderData)
+        await axios.post('/api/orders', orderData)
         
         clearCart()
         setLoading(false)

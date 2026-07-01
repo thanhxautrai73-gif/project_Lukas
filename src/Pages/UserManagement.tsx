@@ -38,7 +38,7 @@ const UserManagement = () => {
     const fetchUsers = async () => {
         try {
             setLoading(true)
-            const response = await axios.get('http://localhost:5000/api/users', {
+            const response = await axios.get('/api/users', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -64,7 +64,7 @@ const UserManagement = () => {
         try {
             setError('')
             setMessage('')
-            const response = await axios.put(`http://localhost:5000/api/users/${userId}`, 
+            const response = await axios.put(`/api/users/${userId}`, 
                 { role: newRole },
                 {
                     headers: {
@@ -91,7 +91,7 @@ const UserManagement = () => {
         try {
             setError('')
             setMessage('')
-            const response = await axios.delete(`http://localhost:5000/api/users/${userId}`, {
+            const response = await axios.delete(`/api/users/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
